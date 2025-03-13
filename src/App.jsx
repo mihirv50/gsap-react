@@ -12,6 +12,7 @@ const App = () => {
   const containerRef1 = useRef(null);
   const tl = gsap.timeline();
 
+ const random =  gsap.utils.random(-500,500,100)
   useGSAP(()=>{
     gsap.to(boxRef.current,{
       x:xMove,
@@ -36,7 +37,7 @@ const App = () => {
         boxRef={boxRef}
         circleRef={circleRef}
       /> */}
-      <Animation3 xMove={xMove} setXMove={setXMove} boxRef={boxRef}/>
+      <Animation3 random={random} xMove={xMove} setXMove={setXMove} boxRef={boxRef}/>
     </div>
   );
 };
